@@ -14,8 +14,17 @@ const fun = {
       if('aeiou'.includes(val)) counter++;
     });
     return counter;
-  }
+  },
 
+  growingKeys: (num, str) => {
+    let obj = {};
+    let strKey = str;
+    for(let i = 0; i < num; i++){
+      obj[strKey] = true;
+      strKey += str;
+    }
+    return obj;
+  }
 
 }
 

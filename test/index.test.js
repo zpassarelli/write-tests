@@ -26,5 +26,14 @@ describe('countVowel', ()=>{
   it('should handle non-string inputs',()=>{
     assert.equal(fun.countVowel(50),0);
     assert.equal(fun.countVowel(undefined),0);
-  })
-})
+  });
+});
+
+describe('growingKeys', ()=>{
+  it('should return an object with growingKeys',()=>{
+    let testObj = {"d":true, "dd":true};
+    let testObj2 = {"cow":true, "cowcow":true, "cowcowcow":true};
+    assert.deepEqual(fun.growingKeys(2,"d"), testObj);
+    assert.deepEqual(fun.growingKeys(3,"cow"), testObj2);
+  });
+});
