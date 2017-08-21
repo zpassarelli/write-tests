@@ -17,6 +17,8 @@ const fun = {
   },
 
   growingKeys: (num, str) => {
+    if(str === '') return {};
+    if(num < 1) return {};
     let obj = {};
     let strKey = str;
     for(let i = 0; i < num; i++){

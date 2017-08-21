@@ -30,10 +30,18 @@ describe('countVowel', ()=>{
 });
 
 describe('growingKeys', ()=>{
-  it('should return an object with growingKeys',()=>{
+  it('should return an object with growing keys',()=>{
     let testObj = {"d":true, "dd":true};
     let testObj2 = {"cow":true, "cowcow":true, "cowcowcow":true};
     assert.deepEqual(fun.growingKeys(2,"d"), testObj);
     assert.deepEqual(fun.growingKeys(3,"cow"), testObj2);
   });
+  it('should return an empty object if the string is empty',()=>{
+    let testObj3 = {};
+    assert.deepEqual(fun.growingKeys(5,''), testObj3);
+  });
+  it('should return an empty object if the number is 0 or less',()=>{
+    let testObj4 = {};
+    assert.deepEqual(fun.growingKeys(-4,'cow'), testObj4);
+  })
 });
